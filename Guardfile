@@ -33,6 +33,10 @@ guard 'rspec' do
   watch('config/routes.rb')                           { "spec/routing" }
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
   watch(%r{^app/models/(.+)\.rb$})                    { |m| "spec/models/generic_spec.rb" }
+
+  # Migrations
+  watch(%r{^spec/migrations/.+_spec\.rb$})
+  watch(%r{^spec/dummy/db/migrate/[0-9]{14}_(.+)\.rb$})                           { |m| "spec/migrations/#{m[1]}_spec.rb" }
 end
 
 guard 'bundler' do

@@ -1,0 +1,23 @@
+body.active_admin {
+  .ui-tabs {}
+
+  .ui-tabs-anchor {}
+
+  .ui-tabs-nav {
+    background: none;
+    padding-left: 10px;
+
+    li {
+      box-shadow: #DDDDDD 0px 1px 4px 0px inset;
+      border: none !important;
+    }
+  }
+
+  .ui-tabs-panel {
+    background: #F0F0F0;
+    margin-bottom: 10px;
+    box-shadow: #DDDDDD 0px 1px 4px 0px inset;
+    border-radius: 4px;
+  }
+}
+
